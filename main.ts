@@ -4,6 +4,7 @@ import {
   stringToUpperCase,
 } from "./stringUtils";
 import fs from "fs";
+import path from "path";
 
 type Message = string;
 
@@ -18,3 +19,6 @@ console.log(stringToUpperCase(nodeMessage));
 const reverseData: string = reverseString(nodeMessage);
 fs.writeFileSync("reversed.txt", reverseData);
 console.log("File written successfully!!!");
+
+const filePath: string = path.join(__dirname, "reversed.txt");
+console.log(filePath);
